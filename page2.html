@@ -1,19 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Other page</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/page2.html" aria-current="page">Other page</a>
-    </nav>
-    <main>
-      <h1>My other page</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Moussa Bedir - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #00bcd4, #0073e6);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        header .btn-custom {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        header .btn-custom:hover {
+            background: #f8f9fa;
+            color: #0073e6;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0073e6;
+            border-bottom: 3px solid #0073e6;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Cool Card Layout */
+        .card-custom {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Skills Badges */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skills-list .badge {
+            background-color: #0073e6;
+            color: white;
+            font-size: 1rem;
+            border-radius: 25px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .skills-list .badge:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1 class="fade-in">Mohamed Moussa Bedir</h1>
+<p class="fade-in">Biomedical Engineer| Field Service Engineer| Healthcare Passionate</p>
+        <div class="fade-in">
+            <a href="mailto:mohamedmoussa11710@gmail.com" class="btn btn-light btn-custom">📧 Contact Me via Email</a>
+            <a href="http://www.linkedin.com/in/mohamed-moussa-bedir" target="_blank" class="btn btn-light btn-custom">🔗 View LinkedIn</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <!-- Education Section -->
+        <section>
+            <h2 class="section-title fade-in">🎓 Education</h2>
+            <p><strong>Bachelor of Engineering</strong>, MUST University, Egypt (2019–2024)</p>
+            <p>-<strong> Department:</strong> Biomedical Engineering  </strong><p>- <strong>Grade: B </strong>(Very Good)</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="mt-5">
+            <h2 class="section-title fade-in">💼 Experience</h2>
+            <div class="card-custom p-3">
+                <strong>Service Engineer Intern</strong>, Siemens Healthineers (Jan 2024 – Feb 2024)
+                <ul>
+                    <li>Maintained and calibrated Siemens radiology devices, including MRI and CT scanners.</li>
+                    <li>Troubleshot technical issues to minimize downtime.</li>
+                    <li>Collaborated on process improvements to enhance equipment reliability.</li>
+                </ul>
+            </div>
+            <div class="card-custom p-3 mt-4">
+                <strong>Clinical Engineer Intern</strong>, EHS (Sep 2023)
+                <ul>
+                    <li>Ensured equipment reliability and safety in patient care.</li>
+                    <li>Coordinated workflows between engineers and healthcare professionals.</li>
+                </ul>
+            </div>
+            <div class="card-custom p-3 mt-4">
+                <strong>Biomedical Technician Intern</strong>, MAVEC Company (Jul 2022)
+                <ul>
+                    <li>Diagnosed technical issues and implemented solutions for medical devices.</li>
+                    <li>Assisted in repairing and replacing malfunctioning components.</li>
+                </ul>
+            </div>
+            <div class="card-custom p-3 mt-4">
+                <strong>Biomedical Engineer Intern</strong>, MPCS (Sep 2021)
+                <ul>
+                    <li>Planned medical equipment placement for healthcare facilities.</li>
+                    <li>Ensured compliance with regulatory standards.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mt-5">
+            <h2 class="section-title fade-in">🚀 Projects</h2>
+            <div class="card-custom p-3">
+                <strong>Smart Medical Walker (SMW)</strong> (Sep 2023 – Jan 2024)
+                <ul>
+                    <li>Designed a smart walker with distance, speed, and weight sensors for elderly.</li>
+                    <li>Position: Designer and Clinical Engineering Researcher</li>
+                    <li>Grade: Excellent</li>
+                </ul>
+            </div>
+            <div class="card-custom p-3 mt-4">
+                <strong>GRADUS Rehabilitation Progress Tracking App</strong> (Mar 2024 – Jul 2024)
+                <ul>
+                    <li>Developed a tracking app to monitor rehabilitation progress for patients.</li>
+                    <li>Position: Team Leader & Developer</li>
+                    <li>Grade: Excellent</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mt-5">
+            <h2 class="section-title fade-in">💡 Skills</h2>
+            <div class="skills-list">
+                <span class="badge">Project Management</span>
+                <span class="badge">Medical Equipment Maintenance</span>
+                <span class="badge">Healthcare Management</span>
+                <span class="badge">Embedded Systems</span>
+                <span class="badge">Data Analysis</span>
+                <span class="badge">Team Building & Leadership</span>
+                <span class="badge">Creativity and Innovation</span>
+                <span class="badge">Public Relations</span>
+                <span class="badge">Time Management</span>
+                <span class="badge">Teamwork</span>
+                <span class="badge">Creative Problem Solving</span>
+                <span class="badge">Research Skills</span>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="mt-5">
+            <h2 class="section-title fade-in">📜 Certifications</h2>
+            <ul>
+                <li>Decontamination and Sterilization of Medical Devices - WHO</li>
+                <li>What a Biomedical Service Engineer Needs to Know - KSUMC</li>
+                <li>Discover and Upgrade Your Skills - Microsoft</li>
+                <li>Work Environment Keys - Microsoft</li>
+                <li>Marketing and Sales - Microsoft</li>
+            </ul>
+        </section>
+
+        <!-- Extracurricular Activities -->
+        <section class="mt-5">
+            <h2 class="section-title fade-in">🎯 Extracurricular Activities</h2>
+            <ul>
+                <li><strong>Public Relations</strong>, BMS (Biomedical Engineering Society) (Oct 2021)
+                    <ul>
+                        <li>Contacted and followed up with stakeholders.</li>
+                        <li>Organized conferences.</li>
+                    </ul>
+                </li>
+                <li><strong>Public Relations</strong>, MUNITOR MUST (Dec 2020)
+                    <ul>
+                        <li>Provided free educational materials to students.</li>
+                        <li>Organized student activities.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Residency and Military Status -->
+        <section class="mt-5">
+            <h2 class="section-title fade-in">🌍 Residency & Nationality</h2>
+            <p><strong> - UAE Resident &#127462;&#127466; <p> - Egyptian National &#127466;&#127468;</p> 
+        </section>
     </main>
-  </body>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Mohamed Moussa Bedir. Built with 💻 <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
+
