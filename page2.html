@@ -18,64 +18,88 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #1e1e1e;
+            color: #f5f5f5;
         }
 
         /* Header Section */
         header {
-            background: linear-gradient(135deg, #00bcd4, #0073e6);
+            background: linear-gradient(135deg, #333, #0073e6);
             color: white;
             text-align: center;
             padding: 80px 0;
             position: relative;
+            transition: background 0.5s ease-in-out;
+        }
+
+        header:hover {
+            background: linear-gradient(135deg, #0073e6, #333);
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
         }
 
         header .btn-custom {
             margin-top: 20px;
-            padding: 10px 25px;
-            font-size: 1rem;
+            padding: 15px 40px;
+            font-size: 1.1rem;
             font-weight: bold;
             border-radius: 25px;
+            border: none;
             transition: all 0.3s ease;
+            background-color: #f5f5f5;
+            color: #333;
         }
 
         header .btn-custom:hover {
-            background: #f8f9fa;
-            color: #0073e6;
+            background-color: #333;
+            color: #f5f5f5;
         }
 
         /* Section Titles */
         .section-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: bold;
             color: #0073e6;
-            border-bottom: 3px solid #0073e6;
+            border-bottom: 2px solid #0073e6;
             display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
+            padding-bottom: 8px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* Cool Card Layout */
         .card-custom {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #2d2d2d;
+            color: #f5f5f5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             border-radius: 15px;
             transition: all 0.3s ease;
+            padding: 25px;
+            margin: 20px 0;
         }
 
         .card-custom:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-custom h4 {
+            font-size: 1.6rem;
+            color: #0073e6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Skills Badges */
@@ -135,6 +159,21 @@
             margin-right: 10px;
         }
 
+        /* Unique Styles for Each Section */
+        section:nth-child(even) {
+            background-color: #2c2f34;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        section:nth-child(odd) {
+            background-color: #1d1f23;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             header h1 {
@@ -148,7 +187,12 @@
             .section-title {
                 font-size: 1.8rem;
             }
+
+            .skills-list {
+                justify-content: center;
+            }
         }
+
     </style>
 </head>
 <body>
@@ -156,7 +200,7 @@
     <!-- Header Section -->
     <header>
         <h1 class="fade-in">Mohamed Moussa Bedir</h1>
-<p class="fade-in">Biomedical Engineer| Field Service Engineer| Healthcare Passionate</p>
+        <p class="fade-in">Engineer | Developer | Innovator</p>
         <div class="fade-in">
             <a href="mailto:mohamedmoussa11710@gmail.com" class="btn btn-light btn-custom">📧 Contact Me via Email</a>
             <a href="http://www.linkedin.com/in/mohamed-moussa-bedir" target="_blank" class="btn btn-light btn-custom">🔗 View LinkedIn</a>
@@ -169,36 +213,40 @@
         <section>
             <h2 class="section-title fade-in">🎓 Education</h2>
             <p><strong>Bachelor of Engineering</strong>, MUST University, Egypt (2019–2024)</p>
-            <p>-<strong> Department:</strong> Biomedical Engineering  </strong><p>- <strong>Grade: B </strong>(Very Good)</p>
+            <p>Department: Biomedical Engineering - Grade: B (Very Good)</p>
         </section>
 
         <!-- Experience Section -->
         <section class="mt-5">
             <h2 class="section-title fade-in">💼 Experience</h2>
-            <div class="card-custom p-3">
-                <strong>Service Engineer Intern</strong>, Siemens Healthineers (Jan 2024 – Feb 2024)
+            <div class="card-custom">
+                <h4>Service Engineer Intern</h4>
+                <p>Siemens Healthineers (Jan 2024 – Feb 2024)</p>
                 <ul>
                     <li>Maintained and calibrated Siemens radiology devices, including MRI and CT scanners.</li>
                     <li>Troubleshot technical issues to minimize downtime.</li>
                     <li>Collaborated on process improvements to enhance equipment reliability.</li>
                 </ul>
             </div>
-            <div class="card-custom p-3 mt-4">
-                <strong>Clinical Engineer Intern</strong>, EHS (Sep 2023)
+            <div class="card-custom">
+                <h4>Clinical Engineer Intern</h4>
+                <p>EHS (Sep 2023)</p>
                 <ul>
                     <li>Ensured equipment reliability and safety in patient care.</li>
                     <li>Coordinated workflows between engineers and healthcare professionals.</li>
                 </ul>
             </div>
-            <div class="card-custom p-3 mt-4">
-                <strong>Biomedical Technician Intern</strong>, MAVEC Company (Jul 2022)
+            <div class="card-custom">
+                <h4>Biomedical Technician Intern</h4>
+                <p>MAVEC Company (Jul 2022)</p>
                 <ul>
                     <li>Diagnosed technical issues and implemented solutions for medical devices.</li>
                     <li>Assisted in repairing and replacing malfunctioning components.</li>
                 </ul>
             </div>
-            <div class="card-custom p-3 mt-4">
-                <strong>Biomedical Engineer Intern</strong>, MPCS (Sep 2021)
+            <div class="card-custom">
+                <h4>Biomedical Engineer Intern</h4>
+                <p>MPCS (Sep 2021)</p>
                 <ul>
                     <li>Planned medical equipment placement for healthcare facilities.</li>
                     <li>Ensured compliance with regulatory standards.</li>
@@ -209,16 +257,18 @@
         <!-- Projects Section -->
         <section class="mt-5">
             <h2 class="section-title fade-in">🚀 Projects</h2>
-            <div class="card-custom p-3">
-                <strong>Smart Medical Walker (SMW)</strong> (Sep 2023 – Jan 2024)
+            <div class="card-custom">
+                <h4>Smart Medical Walker (SMW)</h4>
+                <p>Sep 2023 – Jan 2024</p>
                 <ul>
                     <li>Designed a smart walker with distance, speed, and weight sensors for elderly.</li>
                     <li>Position: Designer and Clinical Engineering Researcher</li>
                     <li>Grade: Excellent</li>
                 </ul>
             </div>
-            <div class="card-custom p-3 mt-4">
-                <strong>GRADUS Rehabilitation Progress Tracking App</strong> (Mar 2024 – Jul 2024)
+            <div class="card-custom">
+                <h4>GRADUS Rehabilitation Progress Tracking App</h4>
+                <p>Mar 2024 – Jul 2024</p>
                 <ul>
                     <li>Developed a tracking app to monitor rehabilitation progress for patients.</li>
                     <li>Position: Team Leader & Developer</li>
@@ -279,8 +329,9 @@
 
         <!-- Residency and Military Status -->
         <section class="mt-5">
-            <h2 class="section-title fade-in">🌍 Residency & Nationality</h2>
-            <p><strong> - UAE Resident &#127462;&#127466; <p> - Egyptian National &#127466;&#127468;</p> 
+            <h2 class="section-title fade-in">🌍 Residency & Military Status</h2>
+            <p><span class="icon">🇦🇪</span> UAE Resident<p> <span class="icon">🇪🇬</span> Egyptian National</p>
+            
         </section>
     </main>
 
@@ -293,4 +344,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
