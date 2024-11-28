@@ -79,102 +79,24 @@
             letter-spacing: 2px;
         }
 
-        /* Cool Card Layout */
-        .card-custom {
-            background-color: #2d2d2d;
-            color: #f5f5f5;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            padding: 25px;
-            margin: 20px 0;
-        }
-
-        .card-custom:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .card-custom h4 {
-            font-size: 1.6rem;
-            color: #0073e6;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Skills Badges */
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .skills-list .badge {
-            background-color: #0073e6;
-            color: white;
-            font-size: 1rem;
-            border-radius: 25px;
-            padding: 10px 20px;
-            transition: background-color 0.3s;
-        }
-
-        .skills-list .badge:hover {
-            background-color: #0056b3;
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        footer a {
-            color: #0073e6;
+        /* Emoji Buttons */
+        .emoji-btn {
+            background: none;
+            border: none;
+            color: inherit;
+            font-size: 1.5rem;
+            cursor: pointer;
             text-decoration: none;
-            font-weight: bold;
+            margin-left: 10px;
+            transition: transform 0.2s ease, color 0.3s ease;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .emoji-btn:hover {
+            transform: scale(1.2);
+            color: #0073e6;
         }
 
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .icon {
-            font-size: 2rem;
-            margin-right: 10px;
-        }
-
-        /* Unique Styles for Each Section */
-        section:nth-child(even) {
-            background-color: #2c2f34;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-        }
-
-        section:nth-child(odd) {
-            background-color: #1d1f23;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-        }
-
-        /* Responsive design */
+        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
@@ -187,10 +109,6 @@
             .section-title {
                 font-size: 1.8rem;
             }
-
-            .skills-list {
-                justify-content: center;
-            }
         }
 
     </style>
@@ -200,7 +118,7 @@
     <!-- Header Section -->
     <header>
         <h1 class="fade-in">Mohamed Moussa Bedir</h1>
-        <p class="fade-in">Engineer | Developer | Innovator</p>
+        <p class="fade-in">Biomedical Engineer | Field Service Engineer | Healthcare Passionate</p>
         <div class="fade-in">
             <a href="mailto:mohamedmoussa11710@gmail.com" class="btn btn-light btn-custom">📧 Contact Me via Email</a>
             <a href="http://www.linkedin.com/in/mohamed-moussa-bedir" target="_blank" class="btn btn-light btn-custom">🔗 View LinkedIn</a>
@@ -213,12 +131,16 @@
         <section>
             <h2 class="section-title fade-in">🎓 Education</h2>
             <p><strong>Bachelor of Engineering</strong>, MUST University, Egypt (2019–2024)</p>
-            <p>Department: Biomedical Engineering - Grade: B (Very Good)</p>
+            <p><strong>- Department: </strong>Biomedical Engineering</p>
+            <p><strong>- Grade: B </strong>(Very Good)</p>
         </section>
 
         <!-- Experience Section -->
         <section class="mt-5">
-            <h2 class="section-title fade-in">💼 Experience</h2>
+            <h2 class="section-title fade-in">
+                <a class="emoji-btn" href="https://www.linkedin.com/in/mohamed-moussa-bedir/details/experience/" target="_blank">💼</a>
+                Experience
+            </h2>
             <div class="card-custom">
                 <h4>Service Engineer Intern</h4>
                 <p>Siemens Healthineers (Jan 2024 – Feb 2024)</p>
@@ -236,27 +158,14 @@
                     <li>Coordinated workflows between engineers and healthcare professionals.</li>
                 </ul>
             </div>
-            <div class="card-custom">
-                <h4>Biomedical Technician Intern</h4>
-                <p>MAVEC Company (Jul 2022)</p>
-                <ul>
-                    <li>Diagnosed technical issues and implemented solutions for medical devices.</li>
-                    <li>Assisted in repairing and replacing malfunctioning components.</li>
-                </ul>
-            </div>
-            <div class="card-custom">
-                <h4>Biomedical Engineer Intern</h4>
-                <p>MPCS (Sep 2021)</p>
-                <ul>
-                    <li>Planned medical equipment placement for healthcare facilities.</li>
-                    <li>Ensured compliance with regulatory standards.</li>
-                </ul>
-            </div>
         </section>
 
         <!-- Projects Section -->
         <section class="mt-5">
-            <h2 class="section-title fade-in">🚀 Projects</h2>
+            <h2 class="section-title fade-in">
+                <a class="emoji-btn" href="https://www.linkedin.com/in/mohamed-moussa-bedir/details/projects/" target="_blank">🚀</a>
+                Projects
+            </h2>
             <div class="card-custom">
                 <h4>Smart Medical Walker (SMW)</h4>
                 <p>Sep 2023 – Jan 2024</p>
@@ -266,39 +175,14 @@
                     <li>Grade: Excellent</li>
                 </ul>
             </div>
-            <div class="card-custom">
-                <h4>GRADUS Rehabilitation Progress Tracking App</h4>
-                <p>Mar 2024 – Jul 2024</p>
-                <ul>
-                    <li>Developed a tracking app to monitor rehabilitation progress for patients.</li>
-                    <li>Position: Team Leader & Developer</li>
-                    <li>Grade: Excellent</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="mt-5">
-            <h2 class="section-title fade-in">💡 Skills</h2>
-            <div class="skills-list">
-                <span class="badge">Project Management</span>
-                <span class="badge">Medical Equipment Maintenance</span>
-                <span class="badge">Healthcare Management</span>
-                <span class="badge">Embedded Systems</span>
-                <span class="badge">Data Analysis</span>
-                <span class="badge">Team Building & Leadership</span>
-                <span class="badge">Creativity and Innovation</span>
-                <span class="badge">Public Relations</span>
-                <span class="badge">Time Management</span>
-                <span class="badge">Teamwork</span>
-                <span class="badge">Creative Problem Solving</span>
-                <span class="badge">Research Skills</span>
-            </div>
         </section>
 
         <!-- Certifications Section -->
         <section class="mt-5">
-            <h2 class="section-title fade-in">📜 Certifications</h2>
+            <h2 class="section-title fade-in">
+                <a class="emoji-btn" href="https://www.linkedin.com/in/mohamed-moussa-bedir/details/certifications/" target="_blank">📜</a>
+                Certifications
+            </h2>
             <ul>
                 <li>Decontamination and Sterilization of Medical Devices - WHO</li>
                 <li>What a Biomedical Service Engineer Needs to Know - KSUMC</li>
@@ -307,30 +191,10 @@
                 <li>Marketing and Sales - Microsoft</li>
             </ul>
         </section>
-
-        <!-- Extracurricular Activities -->
-        <section class="mt-5">
-            <h2 class="section-title fade-in">🎯 Extracurricular Activities</h2>
-            <ul>
-                <li><strong>Public Relations</strong>, BMS (Biomedical Engineering Society) (Oct 2021)
-                    <ul>
-                        <li>Contacted and followed up with stakeholders.</li>
-                        <li>Organized conferences.</li>
-                    </ul>
-                </li>
-                <li><strong>Public Relations</strong>, MUNITOR MUST (Dec 2020)
-                    <ul>
-                        <li>Provided free educational materials to students.</li>
-                        <li>Organized student activities.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Residency and Military Status -->
-        <section class="mt-5">
-            <h2 class="section-title fade-in">🌍 Residency & Military Status</h2>
-            <p><span class="icon">🇦🇪</span> UAE Resident<p> <span class="icon">🇪🇬</span> Egyptian National</p>
+    </main>
+    <!-- Residency and Military Status -->
+        <section class="mt-5"><h2 class="section-title fade-in"> 🌍 Residency & Nationality</h2>
+        <p> UAE Resident <span class="icon">🇦🇪</span> <p> Egyptian National <span class="icon">🇪🇬</span> </p>
             
         </section>
     </main>
