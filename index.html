@@ -145,12 +145,13 @@
             background-color: #0073e6;
             color: white;
             border-radius: 25px;
-            padding: 10px 20px;
+            padding ```html
+            : 10px 20px;
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
- .skills-list .badge:hover {
+        .skills-list .badge:hover {
             background-color: #0056b3;
             transform: translateY(-5px);
         }
@@ -192,6 +193,46 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
+        /* General Section Styles */
+        .section-custom {
+            background: linear-gradient(135deg, rgba(0, 115, 230, 0.1), rgba(0, 115, 230, 0.2));
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 115, 230, 0.5);
+        }
+
+        /* Glowing Effect for Text */
+        h4 {
+            color: #f5f5f5;
+            text-shadow: 0 0 10px rgba(0, 115, 230, 1);
+        }
+
+        ul li {
+            position: relative;
+            padding: 10px 0;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #0073e6;
+            box-shadow: 0 0 15px rgba(0, 115, 230, 0.7);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
@@ -204,6 +245,10 @@
 
             .section-title {
                 font-size: 1.8rem;
+            }
+
+            .section-custom {
+                padding: 15px;
             }
         }
     </style>
@@ -224,7 +269,7 @@
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#extracurricular">Extracurricular Activities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#extracurricular">Extr acurricular Activities</a></li>
                     <li class="nav-item"><a class="nav-link" href="#nationality">Residency & Nationality</a></li>
                 </ul>
             </div>
@@ -249,10 +294,12 @@
     <main class="container mt-5">
         <!-- Education Section -->
         <section id="education">
-            <h2 class="section-title fade-in">🎓 Education</h2>
-            <p><strong>Bachelor of Engineering</strong>, MUST University, Egypt (2019–2024)</p>
-            <p><strong>Department:</strong> Biomedical Engineering</p>
-            <p><strong>Grade: B</strong> (Very Good)</p>
+            <div class="section-custom">
+                <h2 class="section-title fade-in">🎓 Education</h2>
+                <p><strong>Bachelor of Engineering</strong>, MUST University, Egypt (2019–2024)</p>
+                <p><strong>Department:</strong> Biomedical Engineering</p>
+                <p><strong>Grade: B</strong> (Very Good)</p>
+            </div>
         </section>
 
         <!-- Experience Section -->
@@ -277,7 +324,7 @@
                     <li>Ensured equipment reliability and safety in patient care.</li>
                     <li>Coordinated workflows between engineers and healthcare professionals.</li>
                 </ul>
-            </div>
+ </div>
             <div class="card-custom">
                 <h4>Biomedical Technician Intern</h4>
                 <p>MAVEC Company (Jul 2022)</p>
@@ -313,7 +360,7 @@
             </div>
             <div class="card-custom">
                 <h4>GRADUS Rehabilitation Progress Tracking App</h4>
-                <p>Mar 2024 – Jul 2024</ p>
+                <p>Mar 2024 – Jul 2024</p>
                 <ul>
                     <li>Developed a tracking app to monitor rehabilitation progress for patients.</li>
                     <li>Position: Team Leader & Developer</li>
@@ -341,36 +388,40 @@
 
         <!-- Certifications Section -->
         <section id="certifications" class="mt-5">
-            <h2 class="section-title fade-in">
-                <a class="emoji-btn" href="https://www.linkedin.com/in/mohamed-moussa-bedir/details/certifications/" target="_blank">📜</a>
-                Certifications
-            </h2>
-            <ul>
-                <li>Decontamination and Sterilization of Medical Devices - <strong>WHO</strong></li>
-                <li>What a Biomedical Service Engineer Needs to Know - <strong>KSUMC</strong></li>
-                <li>Discover and Upgrade Your Skills - <strong>Microsoft</strong></li>
-                <li>Work Environment Keys - <strong>Microsoft</strong></li>
-                <li>Marketing and Sales - <strong>Microsoft</strong></li>
-            </ul>
+            <div class="section-custom">
+                <h2 class="section-title fade-in">
+                    <a class="emoji-btn" href="https://www.linkedin.com/in/mohamed-moussa-bedir/details/certifications/" target="_blank">📜</a>
+                    Certifications
+                </h2>
+                <ul>
+                    <li>Decontamination and Sterilization of Medical Devices - <strong>WHO</strong></li>
+                    <li>What a Biomedical Service Engineer Needs to Know - <strong>KSUMC</strong></li>
+                    <li>Discover and Upgrade Your Skills - <strong>Microsoft</strong></li>
+                    <li>Work Environment Keys - <strong>Microsoft</strong></li>
+                    <li>Marketing and Sales - <strong>Microsoft</strong></li>
+                </ul>
+            </div>
         </section>
 
         <!-- Extracurricular Activities -->
         <section id="extracurricular" class="mt-5">
-            <h2 class="section-title fade-in">🎯 Extracurricular Activities</h2>
-            <ul>
-                <li><strong>Public Relations</strong>, BMS (Biomedical Engineering Society) (Oct 2021)
-                    <ul>
-                        <li>Contacted and followed up with stakeholders.</li>
-                        <li>Organized conferences.</li>
-                    </ul>
-                </li>
-                <li><strong>Public Relations</strong>, MUNITOR MUST (Dec 2020)
-                    <ul>
-                        <li>Provided free educational materials to students.</li>
-                        <li>Organized student activities.</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="section-custom">
+                <h2 class="section-title fade-in">🎯 Extracurricular Activities</h2>
+                <ul>
+                    <li><strong>Public Relations</strong>, BMS (Biomedical Engineering Society) (Oct 2021)
+                        <ul>
+                            <li>Contacted and followed up with stakeholders.</li>
+                            <li>Organized conferences.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Public Relations</strong>, MUNITOR MUST (Dec 2020)
+                        <ul>
+                            <li>Provided free educational materials to students.</li>
+                            <li>Organized student activities.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Residency and Nationality Section -->
@@ -409,3 +460,6 @@
     </script>
 </body>
 </html>
+
+
+   
