@@ -9,6 +9,32 @@
     <!-- Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+    .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between the items */
+    justify-content: center;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 10px;
+    margin: 15px; /* Adds margin to create space around each skill item */
+    transition: transform 0.3s ease;
+}
+
+.skill-item i {
+    margin-bottom: 10px; /* Adds space between the icon and the text */
+}
+
+.skill-item p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff; /* White text color */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); /* Adds a glowing effect */
+
+}
+
         /* General Reset */
         * {
             margin: 0;
@@ -48,6 +74,111 @@
             background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
             animation: gradient-slide 6s infinite;
         }
+        /* SVG Styling */
+.background-svg {
+    position: absolute;
+    animation: svg-float 6s ease-in-out infinite;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.background-svg:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* SVG Positions */
+.background-svg:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.background-svg:nth-child(2) {
+    top: 40%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.background-svg:nth-child(3) {
+    top: 70%;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+/* Floating Animation */
+@keyframes svg-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+        /* 3D Background Styling */
+#background-3d {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind all content */
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Base gradient */
+    overflow: hidden;
+}
+
+/* Simulated 3D objects */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.background-object {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+    mix-blend-mode: overlay;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Positioning multiple 3D objects */
+.background-object:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.background-object:nth-child(2) {
+    top: 30%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.background-object:nth-child(3) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.background-object:nth-child(4) {
+    top: 50%;
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.background-object:nth-child(5) {
+    top: 80%;
+    left: 40%;
+    animation-delay: 4s;
+}
 
         @keyframes gradient-slide {
             from {
@@ -225,7 +356,29 @@
     </style>
 </head>
 <body>
+<div id="background-3d"></div>
+<div class="background-object"></div>
+<div class="background-object"></div>
+<div class="background-object"></div>
+<div class="background-object"></div>
+<div class="background-object"></div>
+<!-- SVG: Microscope -->
+<svg class="background-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="150" height="150">
+  <path d="M40 24l-8-8L28 20l8 8zm16 36h-8v-4h8zm-32 0h8v4h-8zm14-6H26v-8h4v6h8v-6h4zm22 8h-8v-6H24v6h-8v-6H6V36h4v-6h8v-2h-8V20h8V10h4V6h4v4h8V6h4v4h8V6h4v4h8v6h8v4h-8v8h8v6h4v16z" fill="#0073e6" />
+</svg>
 
+<!-- SVG: Heartbeat Monitor -->
+<svg class="background-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="150" height="150">
+  <path d="M6 32h8l4-8 8 16 8-12 4 8h8" fill="none" stroke="#0073e6" stroke-width="2" stroke-linejoin="round" />
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#0073e6" stroke-width="2" />
+</svg>
+
+<!-- SVG: CT Scanner -->
+<svg class="background-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="150" height="150">
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#0073e6" stroke-width="2" />
+  <circle cx="32" cy="32" r="8" fill="none" stroke="#0073e6" stroke-width="2" />
+  <path d="M16 32a16 16 0 0 0 32 0" fill="none" stroke="#0073e6" stroke-width="2" />
+</svg>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -339,21 +492,56 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="mt-5">
-            <h2 class="section-title fade-in">💡 Skills</h2>
-            <div class="skills-list">
-                <span class="badge">Project Management</span>
-                <span class="badge">Medical Equipment Maintenance</span>
-                <span class="badge">Healthcare Management</span>
-                <span class="badge">Embedded Systems</span>
-                <span class="badge">Calibration</span>
-                <span class="badge">Time Management</span>
-                <span class="badge">Creative Problem Solving</span>
-                <span class="badge">Team Building & Leadership</span>
-                <span class="badge">Creativity and Innovation</span>
-                <span class="badge">Public Relations</span>
-            </div>
-        </section>
+<section id="skills" class="mt-5">
+    <h2 class="section-title fade-in">💡 Skills</h2>
+    <div class="skills-list">
+        <!-- Existing skills -->
+        <div class="skill-item">
+            <i class="fas fa-cogs fa-3x"></i>
+            <p>Project Management</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-hospital-alt fa-3x"></i>
+            <p>Medical Equipment Maintenance</p>
+        </div>
+        
+        <!-- Additional skills -->
+        <div class="skill-item">
+            <i class="fas fa-user-md fa-3x"></i>
+            <p>Healthcare Management</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-microchip fa-3x"></i>
+            <p>Embedded Systems</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-sliders-h fa-3x"></i>
+            <p>Calibration</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-clock fa-3x"></i>
+            <p>Time Management</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-lightbulb fa-3x"></i>
+            <p>Creative Problem Solving</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-users fa-3x"></i>
+            <p>Team Building & Leadership</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-brain fa-3x"></i>
+            <p>Creativity and Innovation</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-handshake fa-3x"></i>
+            <p>Public Relations</p>
+        </div>
+    </div>
+</section>
+
+
 
         <!-- Certifications Section -->
         <section id="certifications" class="mt-5">
