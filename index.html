@@ -478,7 +478,7 @@
     }
 }
 
-    /* Education Section */
+  /* Education Section */
 #education {
     background-color: #2a2a2a; /* Dark background to match the theme */
     padding: 40px;
@@ -528,12 +528,21 @@
     color: #00bcd4; /* Text color change on hover */
 }
 
-/* Add subtle icons next to the information */
-#education p::before {
-    content: "📚"; /* Adding a book icon */
-    margin-right: 10px;
-    font-size: 1.4rem;
-    color: #00bcd4;
+/* Add emoji styles for department and grade */
+#education p span {
+    font-size: 1.6rem; /* Adjust size as per your preference */
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* For the "Department" emoji (microscope) */
+#education p span:nth-child(2) {
+    color: #00bcd4; /* Light blue for department */
+}
+
+/* For the "Grade" emoji (medal) */
+#education p span:nth-child(3) {
+    color: #ffeb3b; /* Yellow for grade */
 }
 
 /* Animations for sections */
@@ -551,6 +560,7 @@
 #education {
     animation: slideIn 1s ease-in-out;
 }
+
 
     /* Residency and Nationality Section */
 #nationality {
@@ -1254,13 +1264,11 @@
     <!-- Main Content -->
     <main class="container mt-5">
         <!-- Education Section -->
-        <section id="education">
-            <h2 class="section-title fade-in">🎓 Education</h2>
-            <p><strong>Bachelor of Engineering</strong>, MUST University, Egypt (2019–2024)</p>
-            <p><strong>Department:</strong> Biomedical Engineering</p>
-            <p><strong>Grade: B</strong> (Very Good)</p>
-        </section>
-
+<section id="education">
+    <h2 class="section-title fade-in">🎓 Education</h2>
+    <p><strong> Bachelor of Engineering</strong>, MUST University, Egypt (2019–2024)<span>📚</span></p>
+    <p><strong>Department:</strong> Biomedical Engineering<span>🔬</span> </p> 
+    <p><strong> Grade: B</strong> (Very Good)<span>🎖️</span> </p> </section>
         <!-- Experience Section -->
         <section id="experience" class="mt-5">
             <h2 class="section-title fade-in">
